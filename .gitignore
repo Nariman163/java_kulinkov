@@ -1,1 +1,16 @@
+cat > .gitignore << 'EOF'
+# Системные файлы macOS
+.DS_Store
+
+# IntelliJ IDEA
 .idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+
+# Логи и временные файлы
+*.log
+*.tmp
+EOF
