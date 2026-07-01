@@ -2,7 +2,7 @@ package gnm.geometry.figures;
 
 public class Square {
     public static void printSquareArea(double a){
-        String text = String.format("Площадь квадрата со стороной %f = %f", a,squareArea(a));
+        String text = String.format("Площадь квадрата со стороной %f = %f", a,area(a));
         System.out.println(text);
     }
 
