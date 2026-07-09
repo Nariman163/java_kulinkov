@@ -1,23 +1,15 @@
 package gnm.geometry;
 
-import java.io.File;
-
 public class Hello {
     public static void main(String[] args) {
-        try {
-            var z = calculate();
-            System.out.println(z);
-            System.out.println("Hello World");
-        } catch (ArithmeticException exception) {
-            exception.printStackTrace();
-        }
-    }
-
-    private static int calculate() {
         var x = 1;
-        var y = 0;
-        var z = divide(x, y);
-        return z;
+        var y = 2;
+        if (y == 0) {
+            System.out.println("Division by zero is not allowed");
+        } else {
+            var z = divide(x, y);
+            System.out.println("Hello World");
+        }
     }
 
     private static int divide(int x, int y) {
