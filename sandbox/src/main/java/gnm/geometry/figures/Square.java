@@ -2,6 +2,7 @@ package gnm.geometry.figures;
 
 public record Square(double a) {
 
+
     public Square {
         if (a < 0) {
             throw new IllegalArgumentException("Сторона должна быть положительной");

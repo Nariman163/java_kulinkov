@@ -14,10 +14,6 @@ public class SquareTests {
             throw new AssertionError(String.format("Expected %f, actual %f", 25.0, result));
         }
     }
-    @Test
-    void canCalculatePerimeter() {
-        Assertions.assertEquals(20.0, new Square(5.0).perimeter());
-    }
 
     @Test
     void cantCreateSquare() {
@@ -27,6 +23,34 @@ public class SquareTests {
         } catch(IllegalArgumentException exception) {
             System.out.println("Ошибка идентифицированна, сторона меньше 0");
         }
+    }
+
+    @Test
+    void testEquality(){
+        var s1 = new Square(5);
+        var s2 = new Square(5);
+        Assertions.assertEquals(s1,s2);
+    }
+
+    @Test
+    void testNonEquality(){
+        var s1 = new Square(4);
+        var s2 = new Square(5);
+        Assertions.assertEquals(s1,s2);
+    }
+
+    //Проверка объектов должна производиться через equals, тк == подходит только для примитивных типов
+    @Test
+    void testTest(){
+        var s1 = new Square(5);
+        var s2 = new Square(5);
+        //Assertions.assertTrue(s1 == s2);
+        Assertions.assertTrue(s1.equals(s2));
+    }
+
+    @Test
+    void canCalculatePerimeter() {
+        Assertions.assertEquals(20.0, new Square(5.0).perimeter());
     }
 
     @Test
