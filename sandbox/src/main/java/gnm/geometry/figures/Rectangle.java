@@ -2,12 +2,24 @@ package gnm.geometry.figures;
 
 import java.util.Objects;
 
-public record Rectangle(double a, double b) {
+public final class Rectangle {
+    private final double a;
+    private final double b;
 
-    public Rectangle {
+    public Rectangle(double a, double b) {
         if (a < 0 || b < 0){
             throw  new IllegalArgumentException("Rectangle side should be non-negative");
         }
+        this.a = a;
+        this.b = b;
+    }
+
+    public double a() {
+        return a;
+    }
+
+    public  double b() {
+        return b;
     }
 
     public static void printRectangleArea(double a, double b) {

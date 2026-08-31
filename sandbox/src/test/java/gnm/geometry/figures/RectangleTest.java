@@ -11,6 +11,7 @@ public class RectangleTest {
             new Rectangle(-5,3);
             Assertions.fail();
         } catch (IllegalArgumentException exeption){
+            System.out.println(exeption.getMessage());//Для того, чтобы увидеть в логах SOUT
         }
     }
 
